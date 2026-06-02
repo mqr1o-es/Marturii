@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mărturii Flasher</title>
+    <!-- Scriptul oficial ESP Web Tools de la Home Assistant -->
+    <script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #2C2825; color: white; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        .container { background: white; color: #333; padding: 40px; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.5); text-align: center; max-width: 500px; width: 90%; }
+        h1 { color: #C9A66B; margin: 0 0 10px 0; font-family: 'Georgia', serif; }
+        p.subtitle { color: #888; margin-bottom: 30px; font-size: 14px; }
+        .steps { text-align: left; background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 30px; border: 1px solid #eee; }
+        .steps p { margin: 10px 0; font-size: 15px; }
+        .warning { background: #fff3cd; color: #856404; padding: 10px; border-radius: 6px; font-size: 13px; margin-bottom: 20px; border-left: 4px solid #ffeeba; text-align: left; }
+        /* Stilizăm puțin butonul standard de la ESP Web Tools */
+        esp-web-install-button { margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🛠️ Mărturii Flasher</h1>
+        <p class="subtitle">Scrie softul pe mărturiile noi direct din browser</p>
+        
+        <div class="warning">
+            ⚠️ <b>Atenție:</b> Funcționează doar în Google Chrome sau Microsoft Edge (browsere cu suport Web Serial).
+        </div>
+
+        <div class="steps">
+            <p><b>Pasul 1:</b> Conectează placa ESP32-S3 virgină la USB.</p>
+            <p><b>Pasul 2:</b> Apasă butonul albastru de mai jos.</p>
+            <p><b>Pasul 3:</b> Selectează portul (ex: USB Serial) și dă "Connect". Așteaptă până la 100%.</p>
+        </div>
+
+        <!-- Componenta magică care citește fișierul manifest.json -->
+        <esp-web-install-button manifest="manifest.json">
+            <span slot="unsupported">Browserul tău nu suportă această funcție. Folosește Chrome pe PC.</span>
+        </esp-web-install-button>
+    </div>
+
+</body>
+</html>
