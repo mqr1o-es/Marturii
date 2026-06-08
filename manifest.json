@@ -2,7 +2,7 @@
   "name": "Marturii Flasher",
   "builds": [
     {
-      "chipFamily": "ESP32",
+      "chipFamily": "ESP32-S3",
       "parts": [
         {
           "path": "firmware.bin",
