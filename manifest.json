@@ -6,11 +6,11 @@
       "parts": [
         {
           "path": "firmware.bin",
-          "offset": 65536
+          "offset": 0
         },
         {
           "path": "littlefs.bin",
-          "offset": 1048576
+          "offset": 1114112
         }
       ]
     }
